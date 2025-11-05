@@ -48,7 +48,7 @@ nmrfp/
 
 ## Installation
 ```bash
-git clone <repository-url>
+git clone https://github.com/jenswag/nmrfp.git
 cd nmrfp
 pip install -r requirements.txt
 ```
