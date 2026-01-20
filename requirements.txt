@@ -99,8 +99,8 @@ pytest==8.3.3
 python-dateutil==2.8.2
 pytweening==1.2.0
 pytz==2023.3.post1
-pywin32==306
-pywin32-ctypes==0.2.3
+pywin32==306; platform_system=="Windows"
+pywin32-ctypes==0.2.3; platform_system=="Windows"
 PyYAML==6.0.1
 pyzmq==25.1.2
 RapidFuzz==3.10.0

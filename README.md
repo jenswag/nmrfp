@@ -1,7 +1,7 @@
 # nmrfp
 
 ## Overview
-This repository contains software and an augmented NMR spectra dataset for training and applying a Deep Set Model (DSM) for NMR fingerprinting of mixtures. 
+This repository contains software and an NMR spectra data set for training and applying a Deep Set Model (DSM) for NMR fingerprinting of mixtures. 
 Details are provided in the associated [paper](https://doi.org/...).
 
 ---
@@ -169,5 +169,5 @@ This project is licensed under the MIT License.
 ---
 
 ## Citation
-If you use the NMR fingerprinting method or this software in scientific research, please cite the following papers:  
+If you use the NMR fingerprinting method or this software in scientific research, please cite the following paper:  
 - ...

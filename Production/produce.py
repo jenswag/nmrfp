@@ -114,7 +114,7 @@ model = DSM(F, C, phiX=layersX, nodesX=nodesX, phi=layers[0], sig=layers[1], rho
 
 lossF = nn.CrossEntropyLoss()  # Loss fucntion
 optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=decay)  # Optimizer
-scheduler = ReduceLROnPlateau(optimizer, 'min', patience=patience, factor=0.1, verbose=True)  # Scheduler
+scheduler = ReduceLROnPlateau(optimizer, 'min', patience=patience, factor=0.1)  # Scheduler
 
 # ----------------------------------------------------------------------------------------------------------------------
 # TRAIN MODEL
