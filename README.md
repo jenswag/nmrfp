@@ -2,7 +2,7 @@
 
 ## Overview
 This repository contains software and an NMR spectra data set for training and applying a Deep Set Model (DSM) for NMR fingerprinting of mixtures. 
-Details are provided in the associated [paper](https://doi.org/...).
+Details are provided in the associated [paper](https://doi.org/10.1039/D5DD00490J ).
 
 ---
 
@@ -170,4 +170,14 @@ This project is licensed under the MIT License.
 
 ## Citation
 If you use the NMR fingerprinting method or this software in scientific research, please cite the following paper:  
-- ...
+<pre>
+@article{D5DD00490J,
+  author ="Wagner, Jens and Münnemann, Kerstin and Specht, Thomas and Hasse, Hans and Jirasek, Fabian",
+  title  ="Deep set model for the automated NMR fingerprinting of unknown mixtures",
+  journal  ="Digital Discovery",
+  year  ="2026",
+  pages  ="-",
+  publisher  ="RSC",
+  doi  ="10.1039/D5DD00490J",
+  url  ="http://dx.doi.org/10.1039/D5DD00490J"}
+  <pre>

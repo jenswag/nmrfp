@@ -32,15 +32,24 @@ class DSM(nn.Module):
         self.nodesX = nodesX    # Nodes Phi_C, Phi_H
 
         # Encoder phi
-        layers = [nn.SiLU(), nn.Linear(self.nodesX, self.nodesX)] * phiX
+        layers = []
+        for _ in range(phiX):
+            layers.append(nn.SiLU())
+            layers.append(nn.Linear(self.nodesX, self.nodesX))
         self.phiC = nn.Sequential(nn.Linear(2, self.nodesX),
                                   *layers)
 
-        layers = [nn.SiLU(), nn.Linear(self.nodesX, self.nodesX)] * phiX
+        layers = []
+        for _ in range(phiX):
+            layers.append(nn.SiLU())
+            layers.append(nn.Linear(self.nodesX, self.nodesX))
         self.phiH = nn.Sequential(nn.Linear(1, self.nodesX),
                                   *layers)
 
-        layers = [nn.Linear(self.nodes, self.nodes), nn.SiLU()] * phi
+        layers = []
+        for _ in range(phi):
+            layers.append(nn.Linear(self.nodes, self.nodes))
+            layers.append(nn.SiLU())
         self.phi = nn.Sequential(nn.Linear(self.nodesX, self.nodes),
                                  nn.SiLU(),
                                  *layers)
@@ -49,7 +58,10 @@ class DSM(nn.Module):
         self.sig = nn.ModuleList([EquivLinear(self.nodes, self.nodes) for _ in range(sig + 1)])
 
         # Decoder rho
-        layers = [nn.SiLU(), nn.Linear(self.nodes, self.nodes)] * rho
+        layers = []
+        for _ in range(rho):
+            layers.append(nn.SiLU())
+            layers.append(nn.Linear(self.nodes, self.nodes))
         self.rho = nn.Sequential(*layers,
                                  nn.SiLU(),
                                  nn.Linear(self.nodes, self.C))
