@@ -2,7 +2,7 @@
 
 ## Overview
 This repository contains software and an NMR spectra data set for training and applying a Deep Set Model (DSM) for NMR fingerprinting of mixtures. 
-Details are provided in the associated [paper](https://doi.org/10.1039/D5DD00490J ).
+Details are provided in the associated [paper](https://doi.org/10.1039/D5DD00490J).
 
 ---
 
@@ -42,6 +42,8 @@ nmrfp/
 │   ├── prepare.py
 │   └── produce.py
 │
+├── LICENSE
+├── README.md
 └── requirements.txt
 ```
 ---
@@ -106,7 +108,7 @@ parameters/
 ### Application
 ```text
 input/
-  ├── Blanc.xlsx       Blank reference input  
+  ├── Blanc.xlsx       Blanc reference input  
   ├── Mixture_I.xlsx   Mixture data from the paper  
   ├── Mixture_II.xlsx  
   ├── Mixture_III.xlsx  
@@ -124,8 +126,8 @@ functions/
 The files `data.csv` and `data.json` contain the augmented NMR dataset used for training and validation of the DSM.  
 Each entry represents a molecular spectrum. When multiple spectra for the same compound were available under similar conditions, their corresponding values were averaged.
 
-- `Name:` Molecule name as specified in the source data base  
-- `SMILES:` SMILES string as specified in the source data base  
+- `Name:` Molecule name as specified in the source database  
+- `SMILES:` SMILES string as specified in the source database  
 - `Solvent:` Solvent(s) used in the NMR measurement  
 - `Temperature:` Temperature(s) of the NMR measurement(s)  
 - `Source:` Origin of the data (`NMRshiftDB` or `BMRB`)  
@@ -159,25 +161,27 @@ Each input Excel file contains rows describing the spectral information from the
 ---
 
 ## Requirements
-All dependencies are listed in requirements.txt
+All dependencies are listed in `requirements.txt`.
 
 ---
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See `LICENSE` file for details.
 
 ---
 
 ## Citation
 If you use the NMR fingerprinting method or this software in scientific research, please cite the following paper:  
-<pre>
-@article{D5DD00490J,
-  author ="Wagner, Jens and Münnemann, Kerstin and Specht, Thomas and Hasse, Hans and Jirasek, Fabian",
-  title  ="Deep set model for the automated NMR fingerprinting of unknown mixtures",
-  journal  ="Digital Discovery",
-  year  ="2026",
-  pages  ="-",
-  publisher  ="RSC",
-  doi  ="10.1039/D5DD00490J",
-  url  ="http://dx.doi.org/10.1039/D5DD00490J"}
-  <pre>
+```bibtex
+@article{Wagner2026NMRFP,
+  doi = {10.1039/D5DD00490J},
+  url = {https://doi.org/10.1039/D5DD00490J},
+  author = {Wagner, Jens and M\"{u}nnemann, Kerstin and Specht, Thomas and Hasse, Hans and Jirasek, Fabian},
+  title = {Deep set model for the automated NMR fingerprinting of unknown mixtures},
+  journal = {Digital Discovery},
+  volume = {5},
+  number = {3},
+  pages = {1325--1339},
+  year = {2026}
+}
+```

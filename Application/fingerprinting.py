@@ -127,11 +127,11 @@ for c, h in zip(hsqc, peaksH):
             X[c, 2:2 + prot[c]] = h
 
 # Check input
-for x in X:
+for i, x in enumerate(X):
 
     # Correct missing 1H by Correlation
     if len(x[2:][x[2:] != token]) != 3 - x[1]:
-        x[2:2 + int(x[1] + 1)] = np.round(corr[0] * x[0] + corr[1], 2)
+        x[2:2 + prot[i]] = np.round(corr[0] * x[0] + corr[1], 2)
 
 # Prepare masks
 smask = np.ones(len(peaksC))
